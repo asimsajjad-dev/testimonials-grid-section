@@ -1,0 +1,78 @@
+body{
+    display:grid;
+    place-items: center;
+    font-family: $font-faimly;
+    background-color: map-get($colors, secondary-200);
+    height: 100vh;
+    width: 100%;
+    font-weight: map-get($font-weight,fw-500);
+
+}
+h1,h2,h3{
+    font-weight: map-get($font-weight, fw-600);
+}
+
+$desktop:50.625em;
+@mixin desktop {
+    @media (min-width:#{$desktop}) {
+        @content;
+    }
+}
+#testimonials-grid{
+    display: grid;
+    gap:1rem;
+    width:min(95%,70rem);
+    margin-inline: auto;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+    padding-block: 2rem;
+    @include desktop{
+        grid-template-areas:
+        "one one two five"
+        "three four four five";
+        
+        
+        ;
+    }    
+    .testimonials{
+        display: grid;
+        gap:1rem;
+        padding: 1rem clamp(1rem,5%,3rem);
+        border-radius: 1rem;
+        img{
+            border-radius: 50%;
+        }
+        &:nth-child(1){
+            grid-area: one;
+            background:map-get($colors, primary-100) url(/images/bg-pattern-quotation.svg)  no-repeat;
+            background-position: top  right 10vw;
+        }
+        &:nth-child(2){
+            grid-area: two;
+        }
+        &:nth-child(3){
+            grid-area: three;
+        }
+        &:nth-child(4){
+            grid-area: four;
+        }
+        &:nth-child(5){
+            grid-area: five;
+        }
+        p{
+            font-weight: map-get($font-weight, fw-600);
+        }
+        blockquote{
+            font-weight: map-get($font-weight, fw-500);
+        }
+    
+    }
+    
+
+}
+

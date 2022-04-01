@@ -1,0 +1,17 @@
+{
+  "name": "testimonials-grid-section-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "dependencies": {
+    "-": "^0.0.1",
+    "npm": "^8.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "sass sass:css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

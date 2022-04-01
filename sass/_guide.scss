@@ -1,0 +1,19 @@
+$colors:(
+    primary-100:hsl(263, 55%, 52%),
+    primary-200:hsl(217, 19%, 35%),
+    primary-300:hsl(219, 29%, 14%),
+    primary-400:hsl(0, 0%, 100%),
+    secondary-100:hsl(0, 0%, 81%),
+    secondary-200:hsl(210, 46%, 95%),
+    neutral-100:hsla(0, 0%, 100%),
+    neutral-200:hsla(217, 19%, 35%)
+);
+@function color($color-name){
+    @return map-get($colors,$color-name)
+}
+$font-faimly:'Barlow Semi Condensed', sans-serif;
+$font-weight:(
+    fw-500:500,
+    fw-600:600
+);
+
